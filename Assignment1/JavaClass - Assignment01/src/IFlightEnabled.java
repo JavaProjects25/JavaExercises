@@ -1,4 +1,4 @@
-public interface IFlightEnabled {
+interface IFlightEnabled {
     void takeOff();
     void land();
     void fly();
