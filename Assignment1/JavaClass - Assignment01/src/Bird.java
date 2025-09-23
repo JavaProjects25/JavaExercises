@@ -2,8 +2,13 @@ class Bird extends Animal implements IFlightEnabled, ITrackable {
 
     @Override
     void move() {
+<<<<<<< HEAD
         System.out.println(this.getClass().getName() + " Bird is flying");
     }
+=======
+        System.out.println("Flap wings");
+;   }
+>>>>>>> origin/main
 
     @Override
     public void takeOff(){
