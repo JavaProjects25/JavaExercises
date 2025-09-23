@@ -3,26 +3,24 @@ class DragonFly implements IFlightEnabled {
     String name;
     String type;
 
-    public DragonFly(String name, String type) {
+    DragonFly(String name, String type) {
         this.name = name;
         this.type = type;
     }
 
     @Override
     public void takeOff(){
-        System.out.println(this.getClass().getName() + " is taking off");
-
-
+        System.out.println("DragonFly takes off.");
     }
 
     @Override
     public void land(){
-        System.out.println( this.getClass().getName() + " is landing");
+        System.out.println("DragonFly lands.");
     }
 
     @Override
     public void fly(){
-        System.out.println( this.getClass().getName() + " is flying");
+        System.out.println("DragonFly flies.");
     }
 
 }
