@@ -1,4 +1,4 @@
-public class Jet implements IFlightEnabled, ITrackable {
+class Jet implements IFlightEnabled, ITrackable {
     @Override
     public void takeOff() {
         System.out.println(this.getClass().getName() + " is taking off");
