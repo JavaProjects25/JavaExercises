@@ -1,4 +1,4 @@
-class DragonFly {
+class DragonFly implements IFlightEnabled {
 
     String name;
     String type;
@@ -8,17 +8,20 @@ class DragonFly {
         this.type = type;
     }
 
-    void takeOff(){
+    @Override
+    public void takeOff(){
         System.out.println(this.getClass().getName() + " is taking off");
 
 
     }
 
-    void land(){
+    @Override
+    public void land(){
         System.out.println( this.getClass().getName() + " is landing");
     }
 
-    void fly(){
+    @Override
+    public void fly(){
         System.out.println( this.getClass().getName() + " is flying");
     }
 
