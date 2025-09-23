@@ -1,7 +1,7 @@
 class Satellite implements IOrbitEarth {
     @Override
     public void achieveOrbit() {
-        System.out.println("Orbit achieved!");
+        System.out.println("Orbiting Earth.");
     }
     @Override
     public void takeOff() {

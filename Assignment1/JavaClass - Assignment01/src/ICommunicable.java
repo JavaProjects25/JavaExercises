@@ -1,0 +1,3 @@
+interface ICommunicable {
+    void transmitData();
+}

@@ -1,0 +1,3 @@
+interface IEnergySource {
+    String getEnergyType();
+}

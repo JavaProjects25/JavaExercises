@@ -1,0 +1,3 @@
+interface ISensorEquipped {
+    void readSensors();
+}

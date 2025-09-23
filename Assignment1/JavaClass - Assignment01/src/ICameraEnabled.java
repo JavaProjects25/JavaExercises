@@ -1,0 +1,3 @@
+interface ICameraEnabled {
+    void captureImage();
+}

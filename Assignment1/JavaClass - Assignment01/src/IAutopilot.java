@@ -1,0 +1,3 @@
+interface IAutopilot {
+    void engageAutopilot();
+}
