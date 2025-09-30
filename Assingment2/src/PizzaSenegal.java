@@ -1,7 +1,7 @@
 class PizzaSenegal implements IPizzaPizza {
 
     private Pizza pizza;
-    String SenegaleseIngredient = "Senegaliano";
+    String SenegaleseIngredient;
 
     public PizzaSenegal() {
         pizza = new Pizza();
@@ -26,8 +26,11 @@ class PizzaSenegal implements IPizzaPizza {
         return pizza;
     }
 
-    void MakeIngredientSenegalese(){
-        System.out.println("Add Ingredient: " + SenegaleseIngredient);
+    String getSenegalese(){
+        return SenegaleseIngredient;
+    }
+    void SetSenegalese(){
+        SenegaleseIngredient = "Senegalese";
     }
 
 }

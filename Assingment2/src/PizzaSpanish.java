@@ -1,7 +1,7 @@
 class PizzaSpanish extends PizzaItalian implements IPizzaPizza {
 
     private Pizza pizza;
-    String SpanishIngredient = "Ham";
+    String SpanishIngredient;
 
     public PizzaSpanish() {
         pizza = new Pizza();
@@ -22,7 +22,11 @@ class PizzaSpanish extends PizzaItalian implements IPizzaPizza {
         pizza.setToppings("Spanish Toppings");
     }
 
-    void MakeIngredientHam(){
-        System.out.println("Add Ingredient: " + SpanishIngredient);
+    String getHam(){
+        return SpanishIngredient;
+    }
+
+    void setHam(){
+        this.SpanishIngredient = "Olive oil";
     }
 }
