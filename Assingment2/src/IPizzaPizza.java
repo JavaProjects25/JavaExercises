@@ -4,5 +4,4 @@ interface IPizzaPizza {
     void makeSauce();
     void makeToppings();
     Pizza getPizza();
-
 }

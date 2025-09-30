@@ -25,4 +25,8 @@ class PizzaSenegal implements IPizzaPizza {
         return pizza;
     }
 
+    void MakeIngredientSenegalese(){
+        System.out.println("Add Ingredient: " + SenegaleseIngredient);
+    }
+
 }
