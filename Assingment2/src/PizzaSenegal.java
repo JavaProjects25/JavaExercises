@@ -1,7 +1,7 @@
 class PizzaSenegal implements IPizzaPizza {
 
     private Pizza pizza;
-    String SenegaleseIngredient;
+    String senegalese;
 
     public PizzaSenegal() {
         pizza = new Pizza();
@@ -15,22 +15,20 @@ class PizzaSenegal implements IPizzaPizza {
     public void makeSauce() {
         pizza.setSauce("Senegalese sauce");
     }
-
     @Override
     public void makeToppings() {
         pizza.setToppings("Senegalese Toppings");
+    }
+
+    void SetSenegalese(String senegalese){
+        this.senegalese = senegalese;
+    }
+    void makeSenegalese(){
+        this.SetSenegalese("Senegalese");
     }
 
     @Override
     public Pizza getPizza() {
         return pizza;
     }
-
-    String getSenegalese(){
-        return SenegaleseIngredient;
-    }
-    void SetSenegalese(){
-        SenegaleseIngredient = "Senegalese";
-    }
-
 }

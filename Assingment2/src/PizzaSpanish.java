@@ -1,7 +1,7 @@
 class PizzaSpanish extends PizzaItalian implements IPizzaPizza {
 
     private Pizza pizza;
-    String SpanishIngredient;
+    String ham;
 
     public PizzaSpanish() {
         pizza = new Pizza();
@@ -11,22 +11,24 @@ class PizzaSpanish extends PizzaItalian implements IPizzaPizza {
     public void makeDough() {
         pizza.setDough("Spanish dough");
     }
-
     @Override
     public void makeSauce() {
         pizza.setSauce("Spanish sauce");
     }
-
     @Override
     public void makeToppings() {
         pizza.setToppings("Spanish Toppings");
     }
 
-    String getHam(){
-        return SpanishIngredient;
+    void setHam(String ham) {
+        this.ham = ham;
+    }
+    void makeHam() {
+        this.setHam("Ham");
     }
 
-    void setHam(){
-        this.SpanishIngredient = "Olive oil";
+    @Override
+    public Pizza getPizza() {
+        return pizza;
     }
 }

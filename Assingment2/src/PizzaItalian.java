@@ -24,16 +24,18 @@ class PizzaItalian implements IPizzaPizza {
         this.oliveOil = oliveOil;
     }
     public void makeOliveOil() {
-        this.oliveOil = "Olive Oil";
+        this.setOliveOil("Olive oil");
     }
 
     void setHerbs(String herbs) {
         this.herbs = herbs;
     }
     public void makeHerbs() {
-        this.herbs = "Herbs";
+        this.setHerbs("Herbs");
     }
 
-    public Pizza getPizza() { return pizza; }
-
+    @Override
+    public Pizza getPizza() {
+        return pizza;
+    }
 }
