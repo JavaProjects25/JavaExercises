@@ -1,31 +1,39 @@
 class PizzaItalian implements IPizzaPizza {
     private Pizza pizza;
-    String ingredientOliveOil = "Olive Oil";
-    String ingredientHerbs = "Herbs";
+    String oliveOil;
+    String herbs;
+
     public PizzaItalian() {
         pizza = new Pizza();
     }
+
     @Override
     public void makeDough() {
         pizza.setDough("Italian Dough");
-        System.out.println("Making " + pizza.dough);
     }
     @Override
     public void makeSauce() {
         pizza.setSauce("Italian Sauce");
-        System.out.println("Making " + pizza.sauce);
     }
     @Override
     public void makeToppings() {
         pizza.setToppings("Italian Toppings");
-        System.out.println("Making " + pizza.toppings);
     }
-    public void makeIngredientOliveOil() {
-        System.out.println("Add ingredient: " + ingredientOliveOil);
+
+    void setOliveOil(String oliveOil) {
+        this.oliveOil = oliveOil;
     }
-    public void makeIngredientHerbs() {
-        System.out.println("Add ingredient: " + ingredientHerbs);
+    public void makeOliveOil() {
+        this.oliveOil = "Olive Oil";
     }
+
+    void setHerbs(String herbs) {
+        this.herbs = herbs;
+    }
+    public void makeHerbs() {
+        this.herbs = "Herbs";
+    }
+
     public Pizza getPizza() { return pizza; }
 
 }
