@@ -1,6 +1,7 @@
 class PizzaItalian implements IPizzaPizza {
     private Pizza pizza;
-    String italianIngredients = "Olive Oil, Herbs";
+    String ingredientOliveOil = "Olive Oil";
+    String ingredientHerbs = "Herbs";
     public PizzaItalian() {
         pizza = new Pizza();
     }
@@ -19,8 +20,11 @@ class PizzaItalian implements IPizzaPizza {
         pizza.setToppings("Italian Toppings");
         System.out.println("Making " + pizza.toppings);
     }
-    public void ingredients() {
-        System.out.println("Ingredients: " + italianIngredients);
+    public void makeIngredientOliveOil() {
+        System.out.println("Add ingredient: " + ingredientOliveOil);
+    }
+    public void makeIngredientHerbs() {
+        System.out.println("Add ingredient: " + ingredientHerbs);
     }
     public Pizza getPizza() { return pizza; }
 
