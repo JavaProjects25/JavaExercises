@@ -6,9 +6,11 @@ class Chef {
     }
 
     void makePizza() {
+        pizzaBuilder.pizzaName();
         pizzaBuilder.makeDough();
         pizzaBuilder.makeSauce();
         pizzaBuilder.makeToppings();
+        pizzaBuilder.makeIngredients();
     }
 
     Pizza getPizza() {
