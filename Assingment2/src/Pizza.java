@@ -27,5 +27,4 @@ class Pizza {
     void setToppings(String toppings){
         this.toppings = toppings;
     }
-
 }

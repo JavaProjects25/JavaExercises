@@ -6,6 +6,7 @@ class PizzaSenegal implements IPizzaPizza {
     public PizzaSenegal() {
         pizza = new Pizza();
     }
+
     @Override
     public void makeDough() {
         pizza.setDough("Senegalese dough");
