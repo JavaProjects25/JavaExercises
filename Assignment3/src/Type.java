@@ -1,4 +1,4 @@
- enum Type {
-    volvo,mercedes
-
+enum Type {
+    Car,
+    Truck
 }

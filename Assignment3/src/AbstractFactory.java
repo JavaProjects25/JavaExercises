@@ -1,24 +1,24 @@
 abstract class AbstractFactory {
 //singleton design pattern
-static AbstractFactory factoryMercedes = new MercedesFactory();
-static AbstractFactory factoryVolvo = new VolvoFactory();
+static AbstractFactory factoryTruck = new TruckFactory();
+static AbstractFactory factoryCar = new CarFactory();
 
 static AbstractFactory factory(Type type){
 
      AbstractFactory factory=null;
 
      switch(type) {
-         case mercedes:
-             factory  =factoryMercedes ;
+         case Truck:
+             factory  = factoryTruck ;
 
              break;
-         case volvo:
-             factory = factoryVolvo;
+         case Car:
+             factory = factoryCar;
 
              break;
      }
          return factory;
  }
-    abstract Car makeCar();
-    abstract Truck makeTruck();
+    abstract Volvo makeVolvo();
+    abstract Mercedes makeMercedes();
 }
