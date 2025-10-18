@@ -27,3 +27,16 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Copilot ###
+.copilot/
+.copilot/*
+.copilot-*
+.copilot.db
+.copilot-data/
+.copilot-cache/
+.copilot-telemetry/
+.copilot-migration/
+.github/copilot-data/
+*.copilot
+.copilot-settings.json
