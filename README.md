@@ -41,8 +41,8 @@ JavaExercises/
 ├── Assignment3/          # Abstract Factory Pattern
 ├── Assignment4/          # (In Development)
 ├── Assignment5/          # State Pattern
-├── README.md             # This file
-└── JetBrains.gitignore  # Git ignore configuration
+├── .gitignore            # Git ignore configuration
+└── README.md             # This file
 ```
 
 ## 📚 Assignments
