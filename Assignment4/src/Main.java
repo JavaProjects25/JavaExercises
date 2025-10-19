@@ -3,6 +3,7 @@ import House.Builders.*;
 
 public class Main {
     public static void main(String[] args) {
+<<<<<<< HEAD
         //Initialization
         DesertCondoBuilder desertCondoBuilder = new DesertCondoBuilder();
         Condo.Builders.Engineer desertCondoEngineer = new Condo.Builders.Engineer(desertCondoBuilder);
@@ -38,5 +39,8 @@ public class Main {
         desertHouseEngineer.getHouse().displayHouse();
         iglooHouseEngineer.getHouse().displayHouse();
         jungleHouseEngineer.getHouse().displayHouse();
+=======
+
+>>>>>>> parent of f7c88c0 (Update draw.io diagram typo)
     }
 }
