@@ -21,7 +21,7 @@ public class Doctor implements IState, IMedicalTeam, IObserver {
         this.emergency = emergency;
     }
 
-    
+
     public void addObserver(IObserver observer){
         observers.add(observer);
     }
