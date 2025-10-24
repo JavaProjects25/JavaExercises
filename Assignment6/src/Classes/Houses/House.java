@@ -8,11 +8,6 @@ public class House {
     String roof;
 
 
-    House()
-    {
-
-    }
-
     String GetBasement()
     {
         return basement;
