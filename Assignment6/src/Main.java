@@ -1,20 +1,23 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
-import  Classes.*;
-import  Interfaces.*;
+import Classes.Engineers.*;
+import Classes.Houses.*;
+import Interfaces.IEngineersPriority;
+
 public class Main {
     public static void main(String[] args) {
 
-        ItalianBuilder italianHouseBuilder = new ItalianBuilder();
-        CivilEngineer civilEngineer = new CivilEngineer(italianHouseBuilder);
-        civilEngineer.ConstructHouse();
-        civilEngineer.GetHouse().DisplayHouse();
+        int staminaRequiredtoBuild = 150;
 
-        QuebecBuilder indianHouseBuilder = new QuebecBuilder();
-        CivilEngineer civilEngineer2 = new CivilEngineer(indianHouseBuilder);
-        civilEngineer2.ConstructHouse();
-        civilEngineer2.GetHouse().DisplayHouse();
+        QuebecBuilder quebecBuilder = new QuebecBuilder();
+
+        IEngineersPriority thirdEngineer = new ThirdCivilEngineer(quebecBuilder);
+        IEngineersPriority secondEngineer = new SecondCivilEngineer(quebecBuilder, thirdEngineer);
+        IEngineersPriority firstEngineer = new PrimaryCivilEngineer(quebecBuilder, secondEngineer);
+
+        //casting to the primary engineer to access the ConstructHouse method
+        firstEngineer.handleStamina(staminaRequiredtoBuild);
     }
-   
+
 }

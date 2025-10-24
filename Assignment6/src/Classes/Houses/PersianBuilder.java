@@ -1,34 +1,33 @@
-package Classes;
+package Classes.Houses;
 
 import Interfaces.IBuilder;
 
-public class ItalianBuilder implements IBuilder {
+public class PersianBuilder implements IBuilder {
 
     private House house;
 
-    public ItalianBuilder()
+    PersianBuilder()
     {
         house = new House();
     }
     public void BuildBasement()
     {
-        house.SetBasement("Italian Basement");
+        house.SetBasement("Persian Basement");
     }
     public void BuildRoof()
     {
-        house.SetRoof("Italian Roof");
+        house.SetRoof("Persian Roof");
     }
     public void BuildStructure()
     {
-        house.SetStructure("Italian Structure");
+        house.SetStructure("Persian Structure");
     }
     public void BuildWalls()
     {
-        house.SetWalls("Italian Walls");
+        house.SetWalls("Persian Walls");
     }
     public House GetHouse()
     {
         return house;
     }
-
 }

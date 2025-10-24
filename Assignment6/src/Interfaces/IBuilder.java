@@ -1,6 +1,7 @@
 package Interfaces;
 
-import Classes.*;
+import Classes.Houses.House;
+
 public interface IBuilder {
 
     void BuildBasement();

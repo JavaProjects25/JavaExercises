@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Houses;
 
 public class House {
 
@@ -6,6 +6,12 @@ public class House {
     String structure;
     String walls;
     String roof;
+
+
+    House()
+    {
+
+    }
 
     String GetBasement()
     {

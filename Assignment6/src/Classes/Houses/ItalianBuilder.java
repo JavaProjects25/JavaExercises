@@ -1,33 +1,34 @@
-package Classes;
+package Classes.Houses;
 
 import Interfaces.IBuilder;
 
-public class QuebecBuilder implements IBuilder {
+public class ItalianBuilder implements IBuilder {
 
     private House house;
 
-    public QuebecBuilder()
+    public ItalianBuilder()
     {
         house = new House();
     }
     public void BuildBasement()
     {
-        house.SetBasement("Quebec Basement");
+        house.SetBasement("Italian Basement");
     }
     public void BuildRoof()
     {
-        house.SetRoof("Quebec Roof");
+        house.SetRoof("Italian Roof");
     }
     public void BuildStructure()
     {
-        house.SetStructure("Quebec Structure");
+        house.SetStructure("Italian Structure");
     }
     public void BuildWalls()
     {
-        house.SetWalls("Quebec Walls");
+        house.SetWalls("Italian Walls");
     }
     public House GetHouse()
     {
         return house;
     }
+
 }
