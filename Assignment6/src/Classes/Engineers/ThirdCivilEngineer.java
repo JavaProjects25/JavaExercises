@@ -8,8 +8,6 @@ public class ThirdCivilEngineer implements IEngineersPriority {
 
     IBuilder iBuilder;
 
-    private IEngineersPriority nextEngineer;
-
     int stamina;
 
     public ThirdCivilEngineer(IBuilder iBuilder) {
