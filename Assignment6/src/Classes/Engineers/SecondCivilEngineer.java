@@ -23,7 +23,7 @@ public class SecondCivilEngineer implements IEngineersPriority {
         iBuilder.BuildStructure();
         iBuilder.BuildWalls();
         iBuilder.BuildRoof();
-        iBuilder.GetHouse().DisplayHouse();
+        GetHouse().DisplayHouse();
     }
 
     public House GetHouse()

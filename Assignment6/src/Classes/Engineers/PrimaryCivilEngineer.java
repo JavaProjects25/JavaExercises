@@ -23,13 +23,14 @@ public class PrimaryCivilEngineer implements IEngineersPriority {
         iBuilder.BuildStructure();
         iBuilder.BuildWalls();
         iBuilder.BuildRoof();
-        iBuilder.GetHouse().DisplayHouse();
+        GetHouse().DisplayHouse();
     }
 
     public House GetHouse() {
         return iBuilder.GetHouse();
     }
 
+    //dispenser, if stamina is enough, build house, else pass to next engineer and reduce stamina required
     @Override
     public void handleStamina(int staminaRequired) {
 
