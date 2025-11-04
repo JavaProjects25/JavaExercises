@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class PaymentHandler {
 
 
-    //payment handler has a state, and its also the subject that is going to be observed (controls the states)
+    //payment handler has a state, and it's also the subject that is going to be observed (controls the states)
     private IState state; // aggregation
 
     ArrayList<IObserver> observers;
