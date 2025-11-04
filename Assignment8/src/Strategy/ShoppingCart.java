@@ -10,7 +10,7 @@ public class ShoppingCart {
         this.paymentStrategy = paymentStrategy;
     }
 
-    void checkout(int amount) {
+    public void checkout(int amount) {
         if (paymentStrategy == null) {
             System.out.println("Please set a payment strategy first.");
         } else {

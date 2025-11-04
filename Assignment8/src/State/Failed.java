@@ -8,7 +8,7 @@ public class Failed implements IState {
 
     @Override
     public void paymentState() {
-
+        System.out.println("Payment Failed");
     }
 
     public static Failed Instance() {

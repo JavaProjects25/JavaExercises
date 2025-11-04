@@ -1,6 +1,7 @@
 package State;
 
 import Observer.*;
+import Strategy.ShoppingCart;
 
 import java.util.ArrayList;
 
@@ -12,8 +13,10 @@ public class PaymentHandler {
 
     ArrayList<IObserver> observers;
 
-    public PaymentHandler() {
+    ShoppingCart shoppingCart;
 
+    public PaymentHandler(ShoppingCart shoppingCart) {
+        this.shoppingCart = shoppingCart;
         this.state = Pending.Instance();
         observers = new ArrayList<>();
     }
@@ -24,6 +27,14 @@ public class PaymentHandler {
 
     public IState getState() {
         return state;
+    }
+
+    public void setShoppingCart(ShoppingCart shoppingCart) {
+        this.shoppingCart = shoppingCart;
+    }
+
+    public ShoppingCart getShoppingCart(){
+        return shoppingCart;
     }
 
     public void addObserver(IObserver iObserver) {

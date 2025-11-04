@@ -8,7 +8,7 @@ public class Pending implements IState{
 
     @Override
     public void paymentState() {
-
+        System.out.println("Payment Pending");
     }
 
     public static Pending Instance() {

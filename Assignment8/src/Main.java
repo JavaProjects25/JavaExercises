@@ -24,7 +24,7 @@ public class Main {
 
         // Strategy
         ShoppingCart cart = new ShoppingCart();
-        PaymentHandler paymentHandler = new PaymentHandler();
+        PaymentHandler paymentHandler = new PaymentHandler(cart);
 
         paymentHandler.addObserver(client);
         paymentHandler.addObserver(processor);
@@ -58,21 +58,21 @@ public class Main {
                 cardNumber = scanner.nextLine();
                 System.out.print("Enter the card holder name: ");
                 cardHolder = scanner.nextLine();
-                cart.setPaymentStrategy(new CreditCardPayment(cardNumber, cardHolder));
+                paymentHandler.getShoppingCart().setPaymentStrategy(new CreditCardPayment(cardNumber, cardHolder));
                 break;
 
             case 2:
                 String email;
                 System.out.print("Enter the PayPal email: ");
                 email = scanner.nextLine();
-                cart.setPaymentStrategy(new PayPalPayment(email));
+                paymentHandler.getShoppingCart().setPaymentStrategy(new PayPalPayment(email));
                 break;
 
             case 3:
                 String coin;
                 System.out.println("Enter your coin type");
                 coin = scanner.nextLine();
-                cart.setPaymentStrategy(new CryptocurrencyPayment(coin));
+                paymentHandler.getShoppingCart().setPaymentStrategy(new CryptocurrencyPayment(coin));
                 break;
 
             default:
@@ -92,11 +92,11 @@ public class Main {
             e.printStackTrace();
         }
 
-        simulatePayment(random, paymentHandler);
+        simulatePayment(random, paymentHandler, amount);
 
     }
 
-    static void simulatePayment(Random random, PaymentHandler paymentHandler) {
+    static void simulatePayment(Random random, PaymentHandler paymentHandler, int amount) {
 
         int paymentResult = random.nextInt(2); // 0: success, 1: failure
 
@@ -104,7 +104,7 @@ public class Main {
             //completed
             paymentHandler.setState(Completed.Instance());
             paymentHandler.notifyObservers();
-            System.out.println("Payment completed successfully. Thank you for your purchase!");
+            paymentHandler.getShoppingCart().checkout(amount); //hardcoded for simplicity
         }
 
         else{

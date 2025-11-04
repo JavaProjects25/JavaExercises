@@ -8,7 +8,7 @@ public class Completed implements IState {
 
     @Override
     public void paymentState() {
-
+        System.out.println("Payment Completed");
     }
 
     public static Completed Instance() {
