@@ -6,15 +6,15 @@ public class LegacyCoffeeAdapter implements IBeverage { //we implement IBeverage
 
     private LegacyCoffeeMachine legacyCoffeeMachine;
 
-    private EOldCoffee OldCoffeeType;
-    public LegacyCoffeeAdapter(LegacyCoffeeMachine legacyCoffeeMachine, EOldCoffee OldCoffeeType) {
+    private EOldCoffee oldCoffeeType;
+    public LegacyCoffeeAdapter(LegacyCoffeeMachine legacyCoffeeMachine, EOldCoffee oldCoffeeType) {
         this.legacyCoffeeMachine = legacyCoffeeMachine;
-        this.OldCoffeeType = OldCoffeeType;
+        this.oldCoffeeType = oldCoffeeType;
     }
 
     @Override
     public double getCost() {
-        return switch(OldCoffeeType){
+        return switch(oldCoffeeType){
             case SMALLCOFFEE -> legacyCoffeeMachine.getSmallCoffeeCost();
             case LARGECOFFEEWITHMILK -> legacyCoffeeMachine.getLargeCoffeeWithMilkCost();
         };
@@ -22,7 +22,7 @@ public class LegacyCoffeeAdapter implements IBeverage { //we implement IBeverage
 
     @Override
     public String getDescription() {
-        return switch(OldCoffeeType){
+        return switch(oldCoffeeType){
             case SMALLCOFFEE -> legacyCoffeeMachine.getSmallCoffeeDescription();
             case LARGECOFFEEWITHMILK -> legacyCoffeeMachine.getLargeCoffeeWithMilkDescription();
         };
@@ -30,7 +30,7 @@ public class LegacyCoffeeAdapter implements IBeverage { //we implement IBeverage
 
     @Override
     public int getCalories() {
-        return switch(OldCoffeeType){
+        return switch(oldCoffeeType){
             case SMALLCOFFEE -> legacyCoffeeMachine.getSmallCoffeeCalories();
             case LARGECOFFEEWITHMILK -> legacyCoffeeMachine.getLargeCoffeeWithMilkCalories();
         };

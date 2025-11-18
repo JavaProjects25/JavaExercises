@@ -2,7 +2,6 @@ package Adapters;
 
 public class LegacyCoffeeMachine{
 
-
     public String getSmallCoffeeDescription(){
         return "Small Coffee";
     }
