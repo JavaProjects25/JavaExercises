@@ -2,7 +2,7 @@ package Decorators;
 
 import Beverages.Interfaces.IBeverage;
 
-public class BeverageDecorator implements IBeverage {
+abstract public class BeverageDecorator implements IBeverage {
 
     protected IBeverage beverage;
 
@@ -12,12 +12,17 @@ public class BeverageDecorator implements IBeverage {
     }
 
     @Override
-    public double GetCost(){
-        return beverage.GetCost();
+    public double getCost(){
+        return beverage.getCost();
     }
 
     @Override
-    public String GetDescription(){
-        return beverage.GetDescription();
+    public String getDescription(){
+        return beverage.getDescription();
+    }
+
+    @Override
+    public int getCalories() {
+        return beverage.getCalories();
     }
 }

@@ -2,6 +2,8 @@ package Beverages.Interfaces;
 
 public interface IBeverage {
 
-    double GetCost(); //get the price
-    String GetDescription(); //get the info
+    double getCost(); //get the price
+    String getDescription(); //get the info
+
+    int getCalories(); //get the kcal
 }

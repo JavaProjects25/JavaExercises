@@ -1,19 +1,24 @@
 package Decorators;
 import Beverages.Interfaces.*;
-public class SugarDecorator extends CoffeeShotDecorator {
+public class SugarDecorator extends EspressoShotDecorator {
 
     public SugarDecorator(IBeverage beverage) {
         super(beverage);
     }
 
     @Override
-    public double GetCost() {
-        return beverage.GetCost() + 0.5; // adding cost of sugar
+    public double getCost() {
+        return beverage.getCost() + 0.5; // adding cost of sugar
     }
 
     @Override
-    public String GetDescription() {
-        return beverage.GetDescription() + ", Sugar";
+    public String getDescription() {
+        return beverage.getDescription() + ", Sugar";
+    }
+
+    @Override
+    public int getCalories() {
+        return beverage.getCalories() + 200;
     }
 
 }

@@ -5,12 +5,17 @@ import Beverages.Interfaces.IBeverage;
 public class SimpleCocktail implements IBeverage {
 
     @Override
-    public double GetCost() {
+    public double getCost() {
         return 10.0;
     }
 
     @Override
-    public String GetDescription() {
+    public String getDescription() {
         return "Simple Cocktail";
+    }
+
+    @Override
+    public int getCalories() {
+        return 100;
     }
 }

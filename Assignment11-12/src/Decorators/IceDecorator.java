@@ -9,12 +9,17 @@ public class IceDecorator extends BeverageDecorator {
     }
 
     @Override
-    public double GetCost(){
-        return beverage.GetCost() + 0.5;
+    public double getCost(){
+        return beverage.getCost() + 0.5;
     }
 
     @Override
-    public String GetDescription(){
-        return beverage.GetDescription() + ", Ice";
+    public String getDescription(){
+        return beverage.getDescription() + ", Ice";
+    }
+
+    @Override
+    public int getCalories() {
+        return beverage.getCalories() + 0;
     }
 }
